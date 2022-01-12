@@ -36,12 +36,14 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
+          <SalePrice data-variant={variant}></SalePrice>
         </ImageWrapper>
         <Spacer size={12} />
         <Row>
           <Name>{name}</Name>
           <Price>{formatPrice(price)}</Price>
         </Row>
+        <Spacer size={3} />
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
         </Row>
@@ -53,18 +55,26 @@ const ShoeCard = ({
 const Link = styled.a`
   text-decoration: none;
   color: inherit;
+  flex:1 1 340px;
 `;
 
-const Wrapper = styled.article``;
+const Wrapper = styled.article`
+  
+`;
 
 const ImageWrapper = styled.div`
   position: relative;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100%;
+  border-radius:16px 16px 4px 4px;
+`;
 
 const Row = styled.div`
   font-size: 1rem;
+  display:flex;
+  justify-content:space-between;
 `;
 
 const Name = styled.h3`
@@ -80,7 +90,29 @@ const ColorInfo = styled.p`
 
 const SalePrice = styled.span`
   font-weight: ${WEIGHTS.medium};
-  color: ${COLORS.primary};
+  color: ${COLORS.white};
+  position:absolute;
+  right:-4px;
+  top:12px;
+  width:fit-content;
+  padding:9px;
+  border-radius: 2px;
+  
+
+  &[data-variant='on-sale'] {
+     background-color: ${COLORS.primary};
+  }
+
+  &[data-variant='on-sale']::before {
+     content:"Sale";
+  }
+
+  &[data-variant='new-release'] {
+     background-color: ${COLORS.secondary};
+  }
+  &[data-variant='new-release']::before {
+     content:"Just Released!";
+  }
 `;
 
 export default ShoeCard;
