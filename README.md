@@ -1,6 +1,6 @@
-# Sole&Ankle — Css-for-js Module 4 workshop solution
+# Soles&Ankles —
 
-A course by @joshwcomeau
+This is my solution to module 4 workshop for the [CSS-for-JS course](https://courses.joshwcomeau.com/css-for-js). A course by [@joshwcomeau](https://github.com/joshwcomeau)
 
 ## Instruction
 
