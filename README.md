@@ -1,5 +1,7 @@
 # Sole&Ankle — Css-for-js Module 4 workshop solution
 
+A course by @joshwcomeau
+
 ## Instruction
 
 In this workshop, the goal is to finish building an e-commerce store!
