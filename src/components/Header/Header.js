@@ -27,7 +27,7 @@ const Header = () => {
 };
 
 const MainHeader = styled.div`
-  padding: 0 32px;
+  padding: 18px 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
   display:flex;
   align-items:baseline;
@@ -36,7 +36,7 @@ const MainHeader = styled.div`
 const Nav = styled.nav`
   display:flex;
   gap:48px;
-  margin-left:145px;
+  margin:0 48px;
 `;
 
 const NavLink = styled.a`

@@ -36,7 +36,8 @@ const ShoeCard = ({
       <Wrapper>
         <ImageWrapper>
           <Image alt="" src={imageSrc} />
-          <SalePrice data-variant={variant}></SalePrice>
+          {variant === 'on-sale' && (<SaleBadge data-variant={variant}>Sale</SaleBadge>)}
+          {variant === 'new-release' && (<NewRelease data-variant={variant}>Just Released</NewRelease>)}
         </ImageWrapper>
         <Spacer size={12} />
         <Row>
@@ -46,6 +47,7 @@ const ShoeCard = ({
         <Spacer size={3} />
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
+          {variant === 'on-sale' && (<SalePrice>{formatPrice(salePrice)}</SalePrice>)}
         </Row>
       </Wrapper>
     </Link>
@@ -82,37 +84,58 @@ const Name = styled.h3`
   color: ${COLORS.gray[900]};
 `;
 
-const Price = styled.span``;
+const Price = styled.span`
+  color: ${COLORS.gray[900]};
+  text-decoration: ${(variant) => (variant === 'on-sale' ? 'line-through' : 'none')};
+`;
+
+const SalePrice = styled.span`
+  color: ${COLORS.primary};
+  font-weight: ${WEIGHTS.medium};
+ 
+`;
 
 const ColorInfo = styled.p`
   color: ${COLORS.gray[700]};
 `;
 
-const SalePrice = styled.span`
-  font-weight: ${WEIGHTS.medium};
+const Badge = styled.span`
+   font-weight: ${WEIGHTS.medium};
   color: ${COLORS.white};
   position:absolute;
   right:-4px;
   top:12px;
   width:fit-content;
-  padding:9px;
+  line-height: 32px;
+padding: 0 10px;
+font-size: ${14 / 18}rem;
   border-radius: 2px;
-  
+`;
 
-  &[data-variant='on-sale'] {
-     background-color: ${COLORS.primary};
-  }
+const SaleBadge = styled(Badge)`
+  background-color: ${COLORS.primary};
+`;
 
-  &[data-variant='on-sale']::before {
-     content:"Sale";
-  }
-
-  &[data-variant='new-release'] {
-     background-color: ${COLORS.secondary};
-  }
-  &[data-variant='new-release']::before {
-     content:"Just Released!";
-  }
+const NewRelease = styled(Badge)`
+ background-color: ${COLORS.secondary};
 `;
 
 export default ShoeCard;
+
+
+/*
+you can use data attributes to style the badge
+&[data-variant='on-sale'] {
+  background-color: ${COLORS.primary};
+}
+
+&[data-variant='on-sale']::before {
+  content:"Sale";
+}
+
+&[data-variant='new-release'] {
+  background-color: ${COLORS.secondary};
+}
+&[data-variant='new-release']::before {
+  content:"Just Released!";
+} */

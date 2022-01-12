@@ -48,8 +48,7 @@ const Wrapper = styled.div`
 `;
 
 const LeftColumn = styled.div`
-   flex:0 1 250px;
-   margin-top: 11px;
+   flex:0 1 248px;
 `;
 
 const MainColumn = styled.div`
