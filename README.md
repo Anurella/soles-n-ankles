@@ -10,16 +10,7 @@ The good news is, most of our work is done already. We just need to write some a
 
 - Access the Figma: https://www.figma.com/file/kAL3AumTUV11y1IqHhltB6/Sole-and-Ankle-%E2%80%94-Mockup
 
-This project uses Create React App. To get started, run the following terminal commands:
-
-- `npm install`
-- `npm run start`
-
-You can then visit the app in-browser; it defaults to http://localhost:3000.
-
-_Note that we're only focusing on the design._ The links and inputs don't do anything.
-
-## Exercise 1: Superheader
+### Exercise 1: Superheader
 
 Let's build the “Superheader” a thin grey strip that runs along the top of the page:
 
@@ -27,13 +18,13 @@ Let's build the “Superheader” a thin grey strip that runs along the top of t
 
 Use Flexbox to correctly align the elements within `src/components/SuperHeader`.
 
-## Exercise 2: Header
+### Exercise 2: Header
 
 Continuing on down, let's tackle the main header:
 
 ![Close-up screenshot of the header and superheader](./docs/exercise-2-solution.png)
 
-## Exercise 3: Shell
+### Exercise 3: Shell
 
 Next up, we want to tackle the "framing" around the shoe grid — the sidebar and title/filter.
 
@@ -41,7 +32,7 @@ Next up, we want to tackle the "framing" around the shoe grid — the sidebar an
 
 _NOTE:_ To make life a bit easier, you may wish to comment out the `<ShoeGrid>` component. We'll work on integrating it in the next exercise.
 
-## Exercise 4: Shoe Grid
+### Exercise 4: Shoe Grid
 
 This exercise features two mini-challenges. The second one is a chance to revisit some of the lessons learned in previous modules, and isn't as specific to Flexbox.
 
@@ -59,7 +50,7 @@ This is a tricky problem to solve with Flexbox—CSS Grid is a better tool for t
 
 In a future module, we'll revisit this and see how CSS Grid can help us out :)
 
-## 4B: Final touches
+### 4B: Final touches
 
 Our sneaker store is in pretty good shape, but there's a couple small bits of polish missing: the "New Release" / "Sale" flag, and the sale price detail.
 
@@ -69,4 +60,15 @@ _NOTE:_ This exercise has minimal flexbox implications, and is mainly about revi
 
 ## To be continued!
 
-Our sneaker store can flex to support different screen sizes, but there isn't a proper mobile or tablet view. Don't fret — we will revisit this workshop in a future module!
+Our sneaker store can flex to support different screen sizes, check module 5 repo to see the update
+
+## Getting Started
+
+This project uses Create React App. To get started, run the following terminal commands:
+
+- `npm install`
+- `npm run start`
+
+You can then visit the app in-browser; it defaults to http://localhost:3000.
+
+_Note that we're only focusing on the design._ The links and inputs don't do anything.
